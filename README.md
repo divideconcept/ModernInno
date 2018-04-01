@@ -11,6 +11,6 @@ In your project, add the following lines:
     WizardSmallImageFile=PathToMyBannerImage
 
 The layout is automatically resized based on the size of your banner image.  
-All page will use this layout, including the Welcome and Finished pages.
+All pages will use this layout, including the Welcome and Finished pages.
 
 ![ModernInno Example](moderninno.png)
