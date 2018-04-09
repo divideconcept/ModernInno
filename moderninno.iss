@@ -39,7 +39,8 @@ begin
 end;
 
 { inspired by https://stackoverflow.com/questions/11778292/how-to-change-wizard-size-width-and-height-in-an-inno-setup-installer
-  and https://stackoverflow.com/questions/38684039/display-image-in-top-panel-of-inno-setup-wizard-instead-of-page-title-and-descri }
+  and https://stackoverflow.com/questions/38684039/display-image-in-top-panel-of-inno-setup-wizard-instead-of-page-title-and-descri
+  check Projects/Wizard.pas for more items }
 procedure InitializeWizard();
 var
   DeltaY: Integer;
@@ -114,6 +115,12 @@ begin
     { ReadyPage }
     GrowRightAndShiftDown(ReadyMemo, DeltaX, DeltaY);
     GrowRightAndShiftDown(ReadyLabel, DeltaX, DeltaY);
+
+    { PreparingPage }
+    ShiftDown(PreparingYesRadio, DeltaY);
+    ShiftDown(PreparingNoRadio, DeltaY);
+    GrowRightAndShiftDown(PreparingLabel, DeltaX, DeltaY);
+    GrowRightAndShiftDown(PreparingMemo, DeltaX, DeltaY);
 
     { InstallingPage }
     GrowRightAndShiftDown(FilenameLabel, DeltaX, DeltaY);
